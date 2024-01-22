@@ -15,11 +15,8 @@ const ConfirmationModal = ({
 }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-
-  // State variable to manage the progress
   const [progress, setProgress] = useState(0);
 
-  // Function to simulate a progress update
   const simulateProgress = () => {
     setProgress(0);
     const interval = setInterval(() => {
@@ -29,8 +26,8 @@ const ConfirmationModal = ({
     }, 500);
     setTimeout(() => {
       clearInterval(interval);
-      onConfirm(); // Trigger onConfirm after the progress completes
-    }, 5000); // Simulate a 5-second process
+      onConfirm();
+    }, 5000);
   };
 
   return (
@@ -69,7 +66,7 @@ const ConfirmationModal = ({
           <LinearProgress
             variant="determinate"
             value={progress}
-            color={theme.palette.mode === "dark" ? "primary" : "secondary"}
+            color={theme.palette.mode === "dark" ? "secondary" : "secondary"}
             sx={{ mb: 2 }}
           />
         )}
