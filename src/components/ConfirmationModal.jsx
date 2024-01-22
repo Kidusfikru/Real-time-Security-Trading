@@ -29,6 +29,7 @@ const ConfirmationModal = ({
     }, 500);
     setTimeout(() => {
       clearInterval(interval);
+      onConfirm(); // Trigger onConfirm after the progress completes
     }, 5000); // Simulate a 5-second process
   };
 
@@ -80,10 +81,7 @@ const ConfirmationModal = ({
             backgroundColor: colors.yellow[400],
             color: theme.palette.success.contrastText,
           }}
-          onClick={() => {
-            simulateProgress();
-            onConfirm();
-          }}
+          onClick={simulateProgress}
         >
           Confirm
         </Button>

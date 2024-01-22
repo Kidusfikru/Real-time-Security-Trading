@@ -80,7 +80,7 @@ const Linebar = ({ data }) => {
         tickSize: 0,
         tickPadding: 5,
         tickRotation: 0,
-        // legend: "Metrics",
+        legend: "Today's Performance",
         legendOffset: 36,
         legendPosition: "middle",
       }}

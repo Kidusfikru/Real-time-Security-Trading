@@ -6,6 +6,7 @@ import {
   CardContent,
   Chip,
   Icon,
+  IconButton,
   TextField,
   Typography,
 } from "@mui/material";
@@ -16,10 +17,13 @@ import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import Linebar from "../utils/Linebar";
 import ConfirmationModal from "./ConfirmationModal";
 import Topbar from "../constants/Topbar";
+import { useNavigate } from "react-router-dom";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
 const StockOrder = ({ data }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const navigate = useNavigate();
 
   const [selectedChip, setSelectedChip] = useState(null);
   const [numberOfShares, setNumberOfShares] = useState(null);
@@ -49,8 +53,6 @@ const StockOrder = ({ data }) => {
   const handleInput = (event) => {
     const inputShares = event.target.value.replace(/[^0-9]/g, "");
     setNumberOfShares(inputShares);
-
-    // Clear the shares error when the user starts typing
     setSharesError(false);
   };
 
@@ -85,6 +87,11 @@ const StockOrder = ({ data }) => {
   return (
     <div>
       <Topbar title="Stock Order" className="fixed top-0 left-0 right-0" />
+      <Box>
+        <IconButton onClick={() => navigate("/")}>
+          <ArrowBackIosIcon />
+        </IconButton>
+      </Box>
       <Box m="20px">
         <Box display="flex" justifyContent="space-between" alignItems="center">
           <Card
@@ -167,6 +174,7 @@ const StockOrder = ({ data }) => {
         >
           <TextField
             label="Shares"
+            type="number"
             onInput={handleInput}
             variant="outlined"
             error={sharesError}
@@ -328,6 +336,7 @@ const StockOrder = ({ data }) => {
           setNumberOfShares("");
           setSelectedChip("");
           setModalOpen(false);
+          navigate("/");
         }}
         onDecline={() => setModalOpen(false)}
         selected={selectedChip}
