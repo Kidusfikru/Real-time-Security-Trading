@@ -41,7 +41,7 @@ const StatBox = ({ stockData }) => {
         alignItems: "center",
         boxShadow: theme.palette.mode === "light" ? 4 : 8,
         width: "100%",
-        backgroundColor: colors.yellow[400],
+        backgroundColor: colors.grey[400],
       }}
     >
       <CardContent>

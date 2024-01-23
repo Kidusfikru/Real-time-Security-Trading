@@ -75,7 +75,7 @@ const ConfirmationModal = ({
           variant="contained"
           sx={{
             mr: 2,
-            backgroundColor: colors.yellow[400],
+            backgroundColor: colors.grey[400],
             color: theme.palette.success.contrastText,
           }}
           onClick={simulateProgress}

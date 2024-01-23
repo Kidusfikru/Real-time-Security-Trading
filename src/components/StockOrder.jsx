@@ -102,7 +102,7 @@ const StockOrder = ({ data }) => {
               alignItems: "center",
               boxShadow: theme.palette.mode === "light" ? 4 : 8,
               width: "100%",
-              backgroundColor: colors.yellow[400],
+              backgroundColor: colors.grey[400],
             }}
           >
             <CardContent>
@@ -133,7 +133,7 @@ const StockOrder = ({ data }) => {
               alignItems: "center",
               boxShadow: theme.palette.mode === "light" ? 4 : 8,
               width: "100%",
-              backgroundColor: colors.yellow[400],
+              backgroundColor: colors.grey[400],
             }}
           >
             <CardContent>
@@ -182,19 +182,15 @@ const StockOrder = ({ data }) => {
               "& .MuiOutlinedInput-root": {
                 "& fieldset": {
                   borderColor:
-                    theme.palette.mode === "light"
-                      ? "black"
-                      : colors.yellow[400],
+                    theme.palette.mode === "light" ? "black" : colors.grey[400],
                 },
                 "&:hover fieldset": {
                   borderColor:
-                    theme.palette.mode === "light"
-                      ? "black"
-                      : colors.yellow[600],
+                    theme.palette.mode === "light" ? "black" : colors.grey[600],
                 },
               },
               color:
-                theme.palette.mode === "light" ? "black" : colors.yellow[400],
+                theme.palette.mode === "light" ? "black" : colors.grey[400],
             }}
           />
           <Chip
@@ -206,12 +202,12 @@ const StockOrder = ({ data }) => {
                 ? theme.palette.error.main // Set border color to red for error
                 : theme.palette.mode === "light"
                 ? "black"
-                : colors.yellow[400],
+                : colors.grey[400],
               color: chipError
                 ? theme.palette.error.main // Set chip color to red for error
                 : theme.palette.mode === "light"
                 ? "black"
-                : colors.yellow[400],
+                : colors.grey[400],
             }}
             error={chipError}
           />
@@ -225,12 +221,12 @@ const StockOrder = ({ data }) => {
                 ? theme.palette.error.main
                 : theme.palette.mode === "light"
                 ? "black"
-                : colors.yellow[400],
+                : colors.grey[400],
               color: chipError
                 ? theme.palette.error.main
                 : theme.palette.mode === "light"
                 ? "black"
-                : colors.yellow[400],
+                : colors.grey[400],
             }}
             error={chipError}
           />
@@ -243,12 +239,12 @@ const StockOrder = ({ data }) => {
                 ? theme.palette.error.main
                 : theme.palette.mode === "light"
                 ? "black"
-                : colors.yellow[400],
+                : colors.grey[400],
               color: chipError
                 ? theme.palette.error.main
                 : theme.palette.mode === "light"
                 ? "black"
-                : colors.yellow[400],
+                : colors.grey[400],
             }}
             error={chipError}
           />
@@ -264,19 +260,15 @@ const StockOrder = ({ data }) => {
               "& .MuiOutlinedInput-root": {
                 "& fieldset": {
                   borderColor:
-                    theme.palette.mode === "light"
-                      ? "black"
-                      : colors.yellow[400],
+                    theme.palette.mode === "light" ? "black" : colors.grey[400],
                 },
                 "&:hover fieldset": {
                   borderColor:
-                    theme.palette.mode === "light"
-                      ? "black"
-                      : colors.yellow[600],
+                    theme.palette.mode === "light" ? "black" : colors.grey[600],
                 },
               },
               color:
-                theme.palette.mode === "light" ? "black" : colors.yellow[400],
+                theme.palette.mode === "light" ? "black" : colors.grey[400],
             }}
             variant="subtitle1"
             gutterBottom
@@ -297,17 +289,17 @@ const StockOrder = ({ data }) => {
                     borderColor:
                       theme.palette.mode === "light"
                         ? "black"
-                        : colors.yellow[400],
+                        : colors.grey[400],
                   },
                   "&:hover fieldset": {
                     borderColor:
                       theme.palette.mode === "light"
                         ? "black"
-                        : colors.yellow[600],
+                        : colors.grey[600],
                   },
                 },
                 color:
-                  theme.palette.mode === "light" ? "black" : colors.yellow[400],
+                  theme.palette.mode === "light" ? "black" : colors.grey[400],
               }}
               color="white"
               variant="subtitle1"
